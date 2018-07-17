@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  pool: 30
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: ocr_reader_development
+
+test:
+  <<: *default
+  database: ocr_reader_test
+
+production:
+  database: ocr_reader_production
+  username: postgres
+  password: postgres
